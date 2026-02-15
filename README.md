@@ -1,4 +1,4 @@
-# Dashboard Project
+# AI-Insights
 
 A modern, production-ready React + TypeScript dashboard with modular architecture.
 
