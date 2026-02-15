@@ -5,17 +5,13 @@ import '../styles/Card.css';
 interface CardProps {
   card: DashboardCardType;
   index: number;
-  onRetry?: (cardId: string) => void;
-  onShowDetails?: (cardId: string) => void;
   onPin?: (card: DashboardCardType) => void;
   isPinned?: boolean;   
 }
 
 const Card: React.FC<CardProps> = ({ 
   card, 
-  index, 
-  onRetry, 
-  onShowDetails,
+  index,
   onPin,
   isPinned 
 }) => {
