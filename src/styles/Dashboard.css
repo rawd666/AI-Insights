@@ -1,0 +1,76 @@
+/* Dashboard Layout Styles */
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--bg-primary);
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: calc(100vh); 
+}
+
+/* Row 1: 4 small cards */
+.dashboard-row-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Row 2: 3 medium cards */
+.dashboard-row-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Row 3: 1 large card + 2 small cards */
+/* Row 3: 1 large card + 2 small cards */
+.dashboard-row-3 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+  flex: 1; 
+}
+
+/* Tablet: Stack into 2 columns */
+@media (max-width: 1024px) {
+  .dashboard-row-1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .dashboard-row-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .dashboard-row-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile: Stack all cards vertically */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .dashboard-row-1,
+  .dashboard-row-2,
+  .dashboard-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
